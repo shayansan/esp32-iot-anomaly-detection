@@ -142,26 +142,3 @@ ESP32 includes hardware security mechanisms such as:
 - Secure key storage
 
 These features help protect firmware, communication, and stored data.
-
----
-
-## Why ESP32 is Suitable for This Project
-
-For the IoT anomaly detection project, ESP32 provides:
-
-- Reliable Wi-Fi communication
-- Sufficient computing power for distributed monitoring
-- Multiple GPIOs for connecting sensors
-- Built-in security features
-- Low power consumption
-- Easy integration with TCP/IP, HTTP, UDP, and MQTT protocols
-- Good support for logging, debugging, and data collection
-
----
-
-## Key Takeaways
-
-- ESP32 is a complete IoT SoC with integrated Wi-Fi and Bluetooth.
-- The ESP32-S3 offers improved performance, USB support, and AI acceleration.
-- The project uses development boards based on the ESP32-S3 module.
-- Hardware security, networking, and low-power operation make ESP32 an excellent platform for IoT security research.
