@@ -142,3 +142,22 @@ ESP32 includes hardware security mechanisms such as:
 - Secure key storage
 
 These features help protect firmware, communication, and stored data.
+
+## what is the external antenna and what does it do when it is:
+
+
+I learned that my ESP32-S3-WROOM-1U uses an external antenna instead of a built-in antenna. The small gold connector on the module is used to attach a 2.4 GHz Wi-Fi and Bluetooth antenna.
+
+When the antenna is connected, the ESP32 can receive and transmit wireless signals with better range and stability. Without the antenna, the ESP32 may still connect when the router or phone is very close, but the signal can be weak, unstable, or completely unavailable.
+
+## whar does boot button do?
+
+I also learned that the BOOT button is used to select the ESP32 startup mode. Normally, the ESP32 starts and runs the uploaded program. When the BOOT button is held during reset, the ESP32 enters download mode and waits for new firmware from the computer. This is useful when PlatformIO remains stuck on the Connecting... message.
+
+## why we have two internal ports and what are their difference?
+
+The UART port connects to the ESP32 through a USB-to-UART converter. It is mainly used for uploading programs, using the Serial Monitor, and basic debugging.
+
+The USB port connects directly to the ESP32-S3 internal USB hardware. It can be used for native USB communication, JTAG debugging, and projects where the ESP32 acts as a USB device, such as a keyboard or mouse.
+
+For my current projects, I mainly use the UART port because it is simpler and more reliable for uploading code and viewing serial output.
