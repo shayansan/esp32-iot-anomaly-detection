@@ -29,3 +29,5 @@ void setup() {
 Pressing the RESET button also works because the Serial Monitor is already open when the ESP32 starts again.
 
 Point I learned: the message is not skipped; it is sent before the Serial Monitor starts listening.
+
+during the last three days, I started studying how classical machine learning can be used on the ESP32. I focused on time-series analysis and K-means clustering for anomaly detection. I learned that the model is usually trained on a computer, while the ESP32 performs inference using the trained parameters. I also studied how sensor data can be divided into windows and converted into simple features such as mean, minimum, maximum, and standard deviation before being analysed by the model.
