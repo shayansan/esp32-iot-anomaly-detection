@@ -31,3 +31,5 @@ Pressing the RESET button also works because the Serial Monitor is already open 
 Point I learned: the message is not skipped; it is sent before the Serial Monitor starts listening.
 
 during the last three days, I started studying how classical machine learning can be used on the ESP32. I focused on time-series analysis and K-means clustering for anomaly detection. I learned that the model is usually trained on a computer, while the ESP32 performs inference using the trained parameters. I also studied how sensor data can be divided into windows and converted into simple features such as mean, minimum, maximum, and standard deviation before being analysed by the model.
+
+today ,I created a simple virtual sensor node program for the ESP32-S3. The program uses a fixed Node ID, increases the sequence number for every new message, shows the uptime using millis(), and generates a simulated sensor value. These values are printed in the Serial Monitor every five seconds in a structured format. This exercise helped me understand how an IoT node can identify itself, track its messages, measure its running time, and produce sample sensor data.
