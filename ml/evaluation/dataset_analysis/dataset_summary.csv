@@ -1,0 +1,4 @@
+dataset,total_rows,normal_rows,anomaly_rows,anomaly_percentage,median_interval_ms
+train,6000,5705,295,4.916666666666666,100.0
+validation,3000,2855,145,4.833333333333333,100.0
+test,3000,2855,145,4.833333333333333,100.0

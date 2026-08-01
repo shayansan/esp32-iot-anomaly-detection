@@ -1,0 +1,13 @@
+dataset,anomaly_type,row_count
+test,humidity_drop,50
+test,light_saturation,45
+test,normal,2855
+test,temperature_spike,50
+train,humidity_drop,100
+train,light_saturation,95
+train,normal,5705
+train,temperature_spike,100
+validation,humidity_drop,50
+validation,light_saturation,45
+validation,normal,2855
+validation,temperature_spike,50
