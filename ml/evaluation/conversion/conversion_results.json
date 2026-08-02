@@ -1,0 +1,89 @@
+{
+    "tensorflow_version": "2.21.0",
+    "selected_threshold": 0.9994572997093201,
+    "representative_samples": 500,
+    "keras_model": {
+        "path": "/home/shayan/Documents/PlatformIO/Projects/ESP32_First_Project/ml/models/baseline_anomaly_model.keras",
+        "size_bytes": 27856,
+        "test_metrics": {
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "true_positive": 145,
+            "true_negative": 2855,
+            "false_positive": 0,
+            "false_negative": 0
+        }
+    },
+    "float32_tflite_model": {
+        "path": "/home/shayan/Documents/PlatformIO/Projects/ESP32_First_Project/ml/models/baseline_anomaly_float32.tflite",
+        "size_bytes": 2816,
+        "tensor_information": {
+            "input_shape": [
+                1,
+                3
+            ],
+            "input_dtype": "<class 'numpy.float32'>",
+            "input_scale": 0.0,
+            "input_zero_point": 0,
+            "output_shape": [
+                1,
+                1
+            ],
+            "output_dtype": "<class 'numpy.float32'>",
+            "output_scale": 0.0,
+            "output_zero_point": 0
+        },
+        "test_metrics": {
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "true_positive": 145,
+            "true_negative": 2855,
+            "false_positive": 0,
+            "false_negative": 0
+        },
+        "comparison_with_keras": {
+            "mean_absolute_difference": 3.985024116248681e-11,
+            "maximum_absolute_difference": 5.960464477539063e-08
+        }
+    },
+    "int8_tflite_model": {
+        "path": "/home/shayan/Documents/PlatformIO/Projects/ESP32_First_Project/ml/models/baseline_anomaly_int8.tflite",
+        "size_bytes": 3288,
+        "deployment_threshold": 0.99609375,
+        "threshold_selected_from": "int8 validation probabilities",
+        "tensor_information": {
+            "input_shape": [
+                1,
+                3
+            ],
+            "input_dtype": "<class 'numpy.int8'>",
+            "input_scale": 0.05467408522963524,
+            "input_zero_point": 12,
+            "output_shape": [
+                1,
+                1
+            ],
+            "output_dtype": "<class 'numpy.int8'>",
+            "output_scale": 0.00390625,
+            "output_zero_point": -128
+        },
+        "test_metrics": {
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "true_positive": 145,
+            "true_negative": 2855,
+            "false_positive": 0,
+            "false_negative": 0
+        },
+        "comparison_with_keras": {
+            "mean_absolute_difference": 0.00017981948622036725,
+            "maximum_absolute_difference": 0.00390625
+        }
+    }
+}

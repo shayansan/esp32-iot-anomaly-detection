@@ -1,0 +1,50 @@
+{
+    "tensorflow_version": "2.21.0",
+    "random_seed": 42,
+    "input_features": 3,
+    "architecture": [
+        {
+            "layer": "Dense",
+            "units": 8,
+            "activation": "relu"
+        },
+        {
+            "layer": "Dense",
+            "units": 4,
+            "activation": "relu"
+        },
+        {
+            "layer": "Dense",
+            "units": 1,
+            "activation": "sigmoid"
+        }
+    ],
+    "parameter_count": 73,
+    "batch_size": 64,
+    "maximum_epochs": 200,
+    "epochs_completed": 200,
+    "best_epoch": 200,
+    "early_stopping_patience": 15,
+    "learning_rate": 0.001,
+    "class_weights": {
+        "0": 0.5258545135845749,
+        "1": 10.169491525423728
+    },
+    "training_metrics": {
+        "accuracy": 1.0,
+        "loss": 9.139867870544549e-06,
+        "pr_auc": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "roc_auc": 1.0
+    },
+    "validation_metrics": {
+        "accuracy": 1.0,
+        "loss": 9.14780412131222e-06,
+        "pr_auc": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "roc_auc": 1.0
+    },
+    "test_dataset_used": false
+}

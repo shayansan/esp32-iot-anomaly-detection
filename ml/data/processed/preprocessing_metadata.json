@@ -1,0 +1,61 @@
+{
+    "feature_columns": [
+        "temperature_c",
+        "humidity_percent",
+        "light_raw"
+    ],
+    "feature_order": {
+        "0": "temperature_c",
+        "1": "humidity_percent",
+        "2": "light_raw"
+    },
+    "target_column": "anomaly",
+    "excluded_columns": [
+        "timestamp_ms"
+    ],
+    "normalization": {
+        "method": "z_score",
+        "formula": "(value - mean) / standard_deviation",
+        "statistics_source": "training dataset only",
+        "feature_mean": {
+            "temperature_c": 24.132083333333334,
+            "humidity_percent": 49.50236333333334,
+            "light_raw": 557.675385
+        },
+        "feature_standard_deviation": {
+            "temperature_c": 1.4135039888125143,
+            "humidity_percent": 3.792667739378474,
+            "light_raw": 219.76958495710556
+        }
+    },
+    "datasets": {
+        "train": {
+            "rows": 6000,
+            "classes": {
+                "normal": 5705,
+                "anomaly": 295
+            }
+        },
+        "validation": {
+            "rows": 3000,
+            "classes": {
+                "normal": 2855,
+                "anomaly": 145
+            }
+        },
+        "test": {
+            "rows": 3000,
+            "classes": {
+                "normal": 2855,
+                "anomaly": 145
+            }
+        }
+    },
+    "model_input": {
+        "number_of_features": 3,
+        "shape_per_sample": [
+            3
+        ],
+        "dtype": "float32"
+    }
+}

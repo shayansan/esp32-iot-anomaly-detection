@@ -1,0 +1,4 @@
+anomaly_type,total_samples,detected_samples,missed_samples,recall
+humidity_drop,50,50,0,1.0
+light_saturation,45,45,0,1.0
+temperature_spike,50,50,0,1.0

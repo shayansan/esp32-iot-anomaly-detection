@@ -1,0 +1,67 @@
+{
+    "model": "/home/shayan/Documents/PlatformIO/Projects/ESP32_First_Project/ml/models/baseline_anomaly_model.keras",
+    "selected_threshold": 0.9994572997093201,
+    "threshold_selected_from": "validation dataset",
+    "validation_metrics": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "roc_auc": 1.0,
+        "average_precision": 1.0,
+        "true_negative": 2855,
+        "false_positive": 0,
+        "false_negative": 0,
+        "true_positive": 145
+    },
+    "test_metrics": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "roc_auc": 1.0,
+        "average_precision": 1.0,
+        "true_negative": 2855,
+        "false_positive": 0,
+        "false_negative": 0,
+        "true_positive": 145
+    },
+    "test_confusion_matrix": [
+        [
+            2855,
+            0
+        ],
+        [
+            0,
+            145
+        ]
+    ],
+    "classification_report": {
+        "normal": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 2855.0
+        },
+        "anomaly": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 145.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 3000.0
+        },
+        "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 3000.0
+        }
+    },
+    "test_dataset_used_for_threshold": false
+}
