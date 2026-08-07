@@ -40,7 +40,7 @@ PROBABILITY_COMPARISON_PATH = (
 
 OUTPUT_DIRECTORY = (
     PROJECT_ROOT
-    / "firmware/tinyml_inference/main"
+    / "firmware/anomaly_tflm/main"
 )
 
 
