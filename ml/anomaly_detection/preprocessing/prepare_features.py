@@ -11,12 +11,16 @@ import pandas as pd
 # Project paths
 # ------------------------------------------------------------
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
-RAW_DATA_DIRECTORY = PROJECT_ROOT / "ml/data/raw"
+RAW_DATA_DIRECTORY = (
+    PROJECT_ROOT
+    / "data/anomaly_detection/raw"
+)
 
 PROCESSED_DATA_DIRECTORY = (
-    PROJECT_ROOT / "ml/data/processed"
+    PROJECT_ROOT
+    / "data/anomaly_detection/processed"
 )
 
 TRAIN_FILE = RAW_DATA_DIRECTORY / "train_seed42.csv"

@@ -3,7 +3,7 @@
     "selected_threshold": 0.9994572997093201,
     "representative_samples": 500,
     "keras_model": {
-        "path": "/home/shayan/Documents/esp32-iot-anomaly-detection/ml/models/baseline_anomaly_model.keras",
+        "path": "/home/shayan/Documents/esp32-iot-anomaly-detection/artifacts/anomaly_detection/models/baseline_anomaly_model.keras",
         "size_bytes": 27856,
         "test_metrics": {
             "accuracy": 1.0,
@@ -17,7 +17,7 @@
         }
     },
     "float32_tflite_model": {
-        "path": "/home/shayan/Documents/esp32-iot-anomaly-detection/ml/models/baseline_anomaly_float32.tflite",
+        "path": "/home/shayan/Documents/esp32-iot-anomaly-detection/artifacts/anomaly_detection/models/baseline_anomaly_float32.tflite",
         "size_bytes": 2816,
         "tensor_information": {
             "input_shape": [
@@ -51,7 +51,7 @@
         }
     },
     "int8_tflite_model": {
-        "path": "/home/shayan/Documents/esp32-iot-anomaly-detection/ml/models/baseline_anomaly_int8.tflite",
+        "path": "/home/shayan/Documents/esp32-iot-anomaly-detection/artifacts/anomaly_detection/models/baseline_anomaly_int8.tflite",
         "size_bytes": 3288,
         "deployment_threshold": 0.99609375,
         "threshold_selected_from": "int8 validation probabilities",

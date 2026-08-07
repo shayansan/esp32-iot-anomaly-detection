@@ -30,10 +30,14 @@ tf.random.set_seed(RANDOM_SEED)
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
 PROCESSED_DATA_DIRECTORY = (
-    PROJECT_ROOT / "ml/data/processed"
+    PROJECT_ROOT
+    / "data/anomaly_detection/processed"
 )
 
-MODEL_DIRECTORY = PROJECT_ROOT / "ml/models"
+MODEL_DIRECTORY = (
+    PROJECT_ROOT
+    / "artifacts/anomaly_detection/models"
+)
 
 TRAINING_RESULTS_DIRECTORY = (
     PROJECT_ROOT

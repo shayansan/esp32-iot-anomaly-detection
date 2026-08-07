@@ -12,12 +12,12 @@ PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
 MODEL_PATH = (
     PROJECT_ROOT
-    / "ml/models/baseline_anomaly_int8.tflite"
+    / "artifacts/anomaly_detection/models/baseline_anomaly_int8.tflite"
 )
 
 PREPROCESSING_PATH = (
     PROJECT_ROOT
-    / "ml/data/processed/preprocessing_metadata.json"
+    / "data/anomaly_detection/processed/preprocessing_metadata.json"
 )
 
 CONVERSION_RESULTS_PATH = (

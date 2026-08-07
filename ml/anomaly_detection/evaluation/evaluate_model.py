@@ -27,22 +27,22 @@ PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
 MODEL_PATH = (
     PROJECT_ROOT
-    / "ml/models/baseline_anomaly_model.keras"
+    / "artifacts/anomaly_detection/models/baseline_anomaly_model.keras"
 )
 
 VALIDATION_FILE = (
     PROJECT_ROOT
-    / "ml/data/processed/validation.npz"
+/ "data/anomaly_detection/processed/validation.npz"
 )
 
 TEST_FILE = (
     PROJECT_ROOT
-    / "ml/data/processed/test.npz"
+/ "data/anomaly_detection/processed/test.npz"
 )
 
 RAW_TEST_FILE = (
     PROJECT_ROOT
-    / "ml/data/raw/test_seed999.csv"
+/ "data/anomaly_detection/raw/test_seed999.csv"
 )
 
 HOST_RESULTS_DIRECTORY = (

@@ -21,7 +21,10 @@ import pandas as pd
 # parents[3] -> project root
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
-RAW_DATA_DIRECTORY = PROJECT_ROOT / "ml/data/raw"
+RAW_DATA_DIRECTORY = (
+    PROJECT_ROOT
+    / "data/anomaly_detection/raw"
+)
 
 ANALYSIS_RESULTS_DIRECTORY = (
     PROJECT_ROOT

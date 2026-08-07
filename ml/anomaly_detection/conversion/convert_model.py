@@ -14,22 +14,22 @@ PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
 KERAS_MODEL_PATH = (
     PROJECT_ROOT
-    / "ml/models/baseline_anomaly_model.keras"
+    / "artifacts/anomaly_detection/models/baseline_anomaly_model.keras"
 )
 
 TRAIN_DATA_PATH = (
     PROJECT_ROOT
-    / "ml/data/processed/train.npz"
+    / "data/anomaly_detection/processed/train.npz"
 )
 
 VALIDATION_DATA_PATH = (
     PROJECT_ROOT
-    / "ml/data/processed/validation.npz"
+    / "data/anomaly_detection/processed/validation.npz"
 )
 
 TEST_DATA_PATH = (
     PROJECT_ROOT
-    / "ml/data/processed/test.npz"
+    / "data/anomaly_detection/processed/test.npz"
 )
 
 EVALUATION_RESULTS_PATH = (
@@ -40,12 +40,12 @@ EVALUATION_RESULTS_PATH = (
 
 FLOAT_MODEL_PATH = (
     PROJECT_ROOT
-    / "ml/models/baseline_anomaly_float32.tflite"
+    / "artifacts/anomaly_detection/models/baseline_anomaly_float32.tflite"
 )
 
 INT8_MODEL_PATH = (
     PROJECT_ROOT
-    / "ml/models/baseline_anomaly_int8.tflite"
+    / "artifacts/anomaly_detection/models/baseline_anomaly_int8.tflite"
 )
 
 OUTPUT_DIRECTORY = (
