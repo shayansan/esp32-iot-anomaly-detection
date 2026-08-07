@@ -1,13 +1,17 @@
 # Python
+.venv/
 venv/
 __pycache__/
 *.py[cod]
 
-# VS Code
-.vscode/
+# Python environment
+.env
 
 # PlatformIO
 .pio/
+
+# VS Code
+.vscode/
 
 # Logs
 *.log

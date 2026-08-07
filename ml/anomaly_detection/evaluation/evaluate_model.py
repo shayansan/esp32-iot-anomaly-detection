@@ -23,7 +23,7 @@ from sklearn.metrics import (
 )
 
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
 MODEL_PATH = (
     PROJECT_ROOT
@@ -45,9 +45,20 @@ RAW_TEST_FILE = (
     / "ml/data/raw/test_seed999.csv"
 )
 
-OUTPUT_DIRECTORY = (
+HOST_RESULTS_DIRECTORY = (
     PROJECT_ROOT
-    / "ml/evaluation/model_test"
+    / "artifacts"
+    / "anomaly_detection"
+    / "host_results"
+    / "model_test"
+)
+
+PLOTS_DIRECTORY = (
+    PROJECT_ROOT
+    / "artifacts"
+    / "anomaly_detection"
+    / "plots"
+    / "model_test"
 )
 
 
@@ -294,10 +305,10 @@ def plot_threshold_results(
     figure.tight_layout()
 
     figure.savefig(
-        OUTPUT_DIRECTORY
-        / "validation_threshold_metrics.png",
-        dpi=150,
-    )
+    PLOTS_DIRECTORY
+    / "validation_threshold_metrics.png",
+    dpi=150,
+)
 
     plt.close(figure)
 
@@ -329,10 +340,10 @@ def plot_confusion_matrix(
     figure.tight_layout()
 
     figure.savefig(
-        OUTPUT_DIRECTORY
-        / "test_confusion_matrix.png",
-        dpi=150,
-    )
+    PLOTS_DIRECTORY
+    / "test_confusion_matrix.png",
+    dpi=150,
+)
 
     plt.close(figure)
 
@@ -384,19 +395,23 @@ def plot_probability_distribution(
     figure.tight_layout()
 
     figure.savefig(
-        OUTPUT_DIRECTORY
-        / "test_probability_distribution.png",
-        dpi=150,
-    )
+    PLOTS_DIRECTORY
+    / "test_probability_distribution.png",
+    dpi=150,
+)
 
     plt.close(figure)
 
 
 def main() -> None:
-    OUTPUT_DIRECTORY.mkdir(
-        parents=True,
-        exist_ok=True,
-    )
+    for directory in (
+        HOST_RESULTS_DIRECTORY,
+        PLOTS_DIRECTORY,
+    ):
+        directory.mkdir(
+            parents=True,
+            exist_ok=True,
+        )
 
     if not MODEL_PATH.exists():
         raise FileNotFoundError(
@@ -504,7 +519,7 @@ def main() -> None:
     })
 
     threshold_table.to_csv(
-        OUTPUT_DIRECTORY
+        HOST_RESULTS_DIRECTORY
         / "validation_threshold_analysis.csv",
         index=False,
     )
@@ -548,7 +563,7 @@ def main() -> None:
     )
 
     test_results.to_csv(
-        OUTPUT_DIRECTORY
+        HOST_RESULTS_DIRECTORY
         / "test_predictions.csv",
         index=False,
     )
@@ -560,14 +575,16 @@ def main() -> None:
     )
 
     per_type_summary.to_csv(
-        OUTPUT_DIRECTORY
+        HOST_RESULTS_DIRECTORY
         / "per_anomaly_type_metrics.csv",
         index=False,
     )
 
     evaluation_results = {
-        "model": str(MODEL_PATH),
-        "selected_threshold": (
+        "model": str(
+            MODEL_PATH.relative_to(PROJECT_ROOT)
+        ),
+        "selected_threshold": float(
             selected_threshold
         ),
         "threshold_selected_from": (
@@ -589,7 +606,7 @@ def main() -> None:
     }
 
     with (
-        OUTPUT_DIRECTORY
+        HOST_RESULTS_DIRECTORY
         / "evaluation_results.json"
     ).open(
         mode="w",
@@ -602,7 +619,7 @@ def main() -> None:
         )
 
     (
-        OUTPUT_DIRECTORY
+        HOST_RESULTS_DIRECTORY
         / "classification_report.txt"
     ).write_text(
         report_text,
@@ -652,9 +669,14 @@ def main() -> None:
         )
     )
 
+    print("\nResults saved in:")
     print(
-        "\nResults saved in:\n"
-        f"{OUTPUT_DIRECTORY}"
+        f"Host results: "
+        f"{HOST_RESULTS_DIRECTORY}"
+    )
+    print(
+        f"Plots: "
+        f"{PLOTS_DIRECTORY}"
     )
 
 

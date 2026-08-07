@@ -10,7 +10,7 @@ import numpy as np
 import tensorflow as tf
 from sklearn.metrics import precision_recall_curve
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
 KERAS_MODEL_PATH = (
     PROJECT_ROOT
@@ -34,7 +34,8 @@ TEST_DATA_PATH = (
 
 EVALUATION_RESULTS_PATH = (
     PROJECT_ROOT
-    / "ml/evaluation/model_test/evaluation_results.json"
+    / "artifacts/anomaly_detection/host_results/"
+    "model_test/evaluation_results.json"
 )
 
 FLOAT_MODEL_PATH = (
@@ -49,7 +50,7 @@ INT8_MODEL_PATH = (
 
 OUTPUT_DIRECTORY = (
     PROJECT_ROOT
-    / "ml/evaluation/conversion"
+    / "artifacts/anomaly_detection/host_results/conversion"
 )
 
 REPRESENTATIVE_SAMPLE_COUNT = 500

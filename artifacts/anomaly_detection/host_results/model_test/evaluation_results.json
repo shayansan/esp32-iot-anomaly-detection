@@ -1,5 +1,5 @@
 {
-    "model": "/home/shayan/Documents/PlatformIO/Projects/ESP32_First_Project/ml/models/baseline_anomaly_model.keras",
+    "model": "ml/models/baseline_anomaly_model.keras",
     "selected_threshold": 0.9994572997093201,
     "threshold_selected_from": "validation dataset",
     "validation_metrics": {

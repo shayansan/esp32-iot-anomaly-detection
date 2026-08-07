@@ -27,7 +27,7 @@ tf.random.set_seed(RANDOM_SEED)
 # Project paths
 # ------------------------------------------------------------
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
 PROCESSED_DATA_DIRECTORY = (
     PROJECT_ROOT / "ml/data/processed"
@@ -35,8 +35,14 @@ PROCESSED_DATA_DIRECTORY = (
 
 MODEL_DIRECTORY = PROJECT_ROOT / "ml/models"
 
-TRAINING_OUTPUT_DIRECTORY = (
-    PROJECT_ROOT / "ml/evaluation/training"
+TRAINING_RESULTS_DIRECTORY = (
+    PROJECT_ROOT
+    / "artifacts/anomaly_detection/host_results/training"
+)
+
+TRAINING_PLOTS_DIRECTORY = (
+    PROJECT_ROOT
+    / "artifacts/anomaly_detection/plots/training"
 )
 
 TRAIN_FILE = (
@@ -443,10 +449,14 @@ def main() -> None:
         exist_ok=True,
     )
 
-    TRAINING_OUTPUT_DIRECTORY.mkdir(
-        parents=True,
-        exist_ok=True,
-    )
+    for directory in (
+        TRAINING_RESULTS_DIRECTORY,
+        TRAINING_PLOTS_DIRECTORY,
+    ):
+        directory.mkdir(
+            parents=True,
+            exist_ok=True,
+        )
 
     # --------------------------------------------------------
     # 1. Load only training and validation data
@@ -512,7 +522,7 @@ def main() -> None:
     save_model_summary(
         model=model,
         output_path=(
-            TRAINING_OUTPUT_DIRECTORY
+            TRAINING_RESULTS_DIRECTORY
             / "model_summary.txt"
         ),
     )
@@ -540,7 +550,7 @@ def main() -> None:
 
         keras.callbacks.CSVLogger(
             filename=(
-                TRAINING_OUTPUT_DIRECTORY
+                TRAINING_RESULTS_DIRECTORY
                 / "training_log.csv"
             ),
             separator=",",
@@ -613,7 +623,7 @@ def main() -> None:
     save_history(
         history=history,
         output_path=(
-            TRAINING_OUTPUT_DIRECTORY
+            TRAINING_RESULTS_DIRECTORY
             / "training_history.json"
         ),
     )
@@ -667,7 +677,7 @@ def main() -> None:
     }
 
     metadata_path = (
-        TRAINING_OUTPUT_DIRECTORY
+        TRAINING_RESULTS_DIRECTORY
         / "training_metadata.json"
     )
 
@@ -692,7 +702,7 @@ def main() -> None:
         title="Training and Validation Loss",
         y_label="Binary cross-entropy loss",
         output_path=(
-            TRAINING_OUTPUT_DIRECTORY
+            TRAINING_PLOTS_DIRECTORY
             / "loss_curve.png"
         ),
     )
@@ -704,7 +714,7 @@ def main() -> None:
         title="Training and Validation Accuracy",
         y_label="Accuracy",
         output_path=(
-            TRAINING_OUTPUT_DIRECTORY
+            TRAINING_PLOTS_DIRECTORY
             / "accuracy_curve.png"
         ),
     )
@@ -716,7 +726,7 @@ def main() -> None:
         title="Training and Validation PR AUC",
         y_label="PR AUC",
         output_path=(
-            TRAINING_OUTPUT_DIRECTORY
+            TRAINING_PLOTS_DIRECTORY
             / "pr_auc_curve.png"
         ),
     )
@@ -724,7 +734,7 @@ def main() -> None:
     plot_precision_and_recall(
         history=history,
         output_path=(
-            TRAINING_OUTPUT_DIRECTORY
+            TRAINING_PLOTS_DIRECTORY
             / "precision_recall_curve.png"
         ),
     )
@@ -763,9 +773,12 @@ def main() -> None:
         f"{BEST_MODEL_PATH}"
     )
 
+    print("\nTraining outputs saved to:")
     print(
-        "\nTraining results saved to:\n"
-        f"{TRAINING_OUTPUT_DIRECTORY}"
+        f"Results: {TRAINING_RESULTS_DIRECTORY}"
+    )
+    print(
+        f"Plots: {TRAINING_PLOTS_DIRECTORY}"
     )
 
 

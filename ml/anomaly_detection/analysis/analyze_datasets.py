@@ -13,17 +13,24 @@ import pandas as pd
 # ------------------------------------------------------------
 
 # This file is located at:
-# project/ml/analysis/analyze_datasets.py
+# project/ml/anomaly_detection/analysis/analyze_datasets.py
 #
 # parents[0] -> analysis
-# parents[1] -> ml
-# parents[2] -> project root
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
+# parents[1] -> anomaly_detection
+# parents[2] -> ml
+# parents[3] -> project root
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
 RAW_DATA_DIRECTORY = PROJECT_ROOT / "ml/data/raw"
 
-OUTPUT_DIRECTORY = (
-    PROJECT_ROOT / "ml/evaluation/dataset_analysis"
+ANALYSIS_RESULTS_DIRECTORY = (
+    PROJECT_ROOT
+    / "artifacts/anomaly_detection/host_results/dataset_analysis"
+)
+
+ANALYSIS_PLOTS_DIRECTORY = (
+    PROJECT_ROOT
+    / "artifacts/anomaly_detection/plots/dataset_analysis"
 )
 
 DATASET_PATHS = {
@@ -283,7 +290,7 @@ def plot_class_distribution(
     figure.tight_layout()
 
     output_path = (
-        OUTPUT_DIRECTORY / "class_distribution.png"
+        ANALYSIS_PLOTS_DIRECTORY / "class_distribution.png"
     )
 
     figure.savefig(output_path, dpi=150)
@@ -339,7 +346,7 @@ def plot_feature_time_series(
 
         figure.tight_layout()
 
-        output_path = OUTPUT_DIRECTORY / (
+        output_path = ANALYSIS_PLOTS_DIRECTORY / (
             f"{dataset_name}_{feature}_time_series.png"
         )
 
@@ -392,7 +399,7 @@ def plot_feature_histograms(
 
         figure.tight_layout()
 
-        output_path = OUTPUT_DIRECTORY / (
+        output_path = ANALYSIS_PLOTS_DIRECTORY / (
             f"train_{feature}_histogram.png"
         )
 
@@ -453,7 +460,7 @@ def plot_feature_relationships(
 
         figure.tight_layout()
 
-        output_path = OUTPUT_DIRECTORY / (
+        output_path = ANALYSIS_PLOTS_DIRECTORY / (
             f"train_scatter_{feature_x}_vs_"
             f"{feature_y}.png"
         )
@@ -492,10 +499,14 @@ def check_distribution_similarity(
 
 
 def main() -> None:
-    OUTPUT_DIRECTORY.mkdir(
-        parents=True,
-        exist_ok=True,
-    )
+    for directory in (
+        ANALYSIS_RESULTS_DIRECTORY,
+        ANALYSIS_PLOTS_DIRECTORY,
+    ):
+        directory.mkdir(
+            parents=True,
+            exist_ok=True,
+        )
 
     datasets = {}
 
@@ -523,22 +534,22 @@ def main() -> None:
 
     # Save analysis results as CSV files.
     dataset_summary.to_csv(
-        OUTPUT_DIRECTORY / "dataset_summary.csv",
+        ANALYSIS_RESULTS_DIRECTORY / "dataset_summary.csv",
         index=False,
     )
 
     anomaly_type_summary.to_csv(
-        OUTPUT_DIRECTORY / "anomaly_type_summary.csv",
+        ANALYSIS_RESULTS_DIRECTORY / "anomaly_type_summary.csv",
         index=False,
     )
 
     feature_statistics.to_csv(
-        OUTPUT_DIRECTORY / "feature_statistics.csv",
+        ANALYSIS_RESULTS_DIRECTORY / "feature_statistics.csv",
         index=False,
     )
 
     distribution_comparison.to_csv(
-        OUTPUT_DIRECTORY
+        ANALYSIS_RESULTS_DIRECTORY
         / "normal_distribution_comparison.csv",
         index=False,
     )
@@ -601,9 +612,12 @@ def main() -> None:
 
         print(unknown_anomalies.to_string(index=False))
 
+    print("\nAnalysis outputs saved to:")
     print(
-        "\nAnalysis files saved in:\n"
-        f"{OUTPUT_DIRECTORY}"
+        f"Results: {ANALYSIS_RESULTS_DIRECTORY}"
+    )
+    print(
+        f"Plots: {ANALYSIS_PLOTS_DIRECTORY}"
     )
 
 

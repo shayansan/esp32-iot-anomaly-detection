@@ -8,7 +8,7 @@ from pathlib import Path
 import pandas as pd
 
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
 MODEL_PATH = (
     PROJECT_ROOT
@@ -22,23 +22,25 @@ PREPROCESSING_PATH = (
 
 CONVERSION_RESULTS_PATH = (
     PROJECT_ROOT
-    / "ml/evaluation/conversion/"
-    "conversion_results.json"
+    / "artifacts/anomaly_detection/host_results/"
+    "conversion/conversion_results.json"
 )
 
 TEST_RESULTS_PATH = (
     PROJECT_ROOT
-    / "ml/evaluation/model_test/test_predictions.csv"
+    / "artifacts/anomaly_detection/host_results/"
+    "model_test/test_predictions.csv"
 )
 
 PROBABILITY_COMPARISON_PATH = (
     PROJECT_ROOT
-    / "ml/evaluation/conversion/probability_comparison.csv"
+    / "artifacts/anomaly_detection/host_results/"
+    "conversion/probability_comparison.csv"
 )
 
 OUTPUT_DIRECTORY = (
     PROJECT_ROOT
-    / "firmware/tinyml_inference/src"
+    / "firmware/tinyml_inference/main"
 )
 
 
