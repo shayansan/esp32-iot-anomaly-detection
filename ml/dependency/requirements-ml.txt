@@ -1,3 +1,0 @@
--r requirements-data.txt
-tensorflow
-scikit-learn
