@@ -1,0 +1,51 @@
+{
+  "benchmark": "MNIST INT8 TFLite Micro on ESP32-S3",
+  "device": {
+    "board": "ESP32-S3-DevKitC-1-N8",
+    "chip": "ESP32-S3",
+    "psram": false,
+    "cpu_frequency_mhz": 160,
+    "flash_mb": 8
+  },
+  "software": {
+    "platformio_espressif32": "7.0.1",
+    "esp_idf": "6.0.1",
+    "tflite_runtime": "esp-tflite-micro"
+  },
+  "model": {
+    "format": "full_int8_tflite",
+    "model_size_bytes": 14072,
+    "host_test_accuracy": 0.9782,
+    "input_dtype": "int8",
+    "output_dtype": "int8",
+    "input_shape": [1, 28, 28, 1],
+    "output_classes": 10
+  },
+  "quantization": {
+    "input_scale": 0.003921568859368563,
+    "input_zero_point": -128,
+    "output_scale": 0.00390625,
+    "output_zero_point": -128
+  },
+  "memory": {
+    "tensor_arena_allocated_bytes": 12288,
+    "tensor_arena_used_bytes": 9836,
+    "firmware_ram_bytes": 28300,
+    "firmware_ram_percent": 8.6,
+    "firmware_flash_bytes": 277185,
+    "firmware_flash_percent": 26.4
+  },
+  "correctness_test": {
+    "expected_label": 7,
+    "predicted_label": 7,
+    "passed": true
+  },
+  "latency": {
+    "warmup_runs": 5,
+    "benchmark_runs": 100,
+    "minimum_us": 8006,
+    "maximum_us": 8069,
+    "average_us": 8041.82,
+    "average_ms": 8.04182
+  }
+}

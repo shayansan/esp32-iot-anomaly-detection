@@ -24,3 +24,4 @@ __pycache__/
 
 # ESP-IDF managed dependencies
 managed_components/
+firmware/*/sdkconfig.esp32-s3-devkitc-1
