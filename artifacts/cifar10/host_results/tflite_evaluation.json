@@ -1,0 +1,14 @@
+{
+  "keras": {
+    "accuracy": 0.6093000173568726,
+    "size_bytes": 229550
+  },
+  "float32_tflite": {
+    "accuracy": 0.6093,
+    "size_bytes": 66496
+  },
+  "int8_tflite": {
+    "accuracy": 0.611,
+    "size_bytes": 24192
+  }
+}
