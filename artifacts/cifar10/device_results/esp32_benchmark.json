@@ -1,0 +1,23 @@
+{
+  "board": "ESP32-S3-DevKitC-1-N8",
+  "cpu_mhz": 160,
+  "psram": false,
+  "model_type": "full_int8",
+  "model_size_bytes": 24192,
+  "tensor_arena_used_bytes": 21276,
+  "minimum_tested_tensor_arena_bytes": 21504,
+  "recommended_tensor_arena_bytes": 22528,
+  "firmware_ram_bytes_at_minimum_arena": 37516,
+  "firmware_flash_bytes": 291209,
+  "correctness_test": {
+    "expected_label": 3,
+    "predicted_label": 3,
+    "passed": true
+  },
+  "latency": {
+    "runs": 100,
+    "min_us": 18566,
+    "max_us": 18591,
+    "average_us": 18580.36
+  }
+}
