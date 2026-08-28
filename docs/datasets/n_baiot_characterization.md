@@ -57,3 +57,22 @@ The first experiment will use binary classification:
 Both Gafgyt/BASHLITE and Mirai traffic will initially be treated as attack samples.
 
 No final subset has been selected yet.
+
+## Feature Characterization
+
+Feature analysis was performed on the training subset only.
+
+- Samples analyzed: 56,000
+- Original features: 115
+- NaN values: 0
+- Infinite values: 0
+- Constant features: 0
+- Near-constant features: 0
+
+Using an absolute Pearson correlation threshold of 0.99:
+
+- Highly correlated feature pairs: 160
+- Features retained: 60
+- Features removed as redundant: 55
+
+The selected 60-feature configuration will be compared experimentally against the full 115-feature baseline.

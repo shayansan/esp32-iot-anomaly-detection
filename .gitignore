@@ -26,5 +26,6 @@ __pycache__/
 managed_components/
 firmware/*/sdkconfig.esp32-s3-devkitc-1
 
-# N-BaIoT raw dataset
+# N-BaIoT datasets
 data/n_baiot/raw/
+data/n_baiot/processed/

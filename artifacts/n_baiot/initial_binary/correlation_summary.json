@@ -1,0 +1,6 @@
+{
+  "samples_analyzed": 56000,
+  "feature_count": 115,
+  "correlation_threshold": 0.99,
+  "highly_correlated_pair_count": 160
+}

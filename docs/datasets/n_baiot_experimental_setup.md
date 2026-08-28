@@ -43,20 +43,33 @@ Multiclass attack classification will be considered as a later extension.
 
 ## Features
 
-The original N-BaIoT representation contains 115 numerical traffic-statistical features.
+The original N-BaIoT representation contains 115 numerical features.
 
-For the initial host-side baseline, all 115 features will be retained.
+Initial analysis was performed using only the training set.
 
-Feature reduction will then be performed using only the training data. Reduced feature sets will be compared based on:
+The training data contained:
 
-- Detection performance
-- Input dimensionality
-- Model size
-- Tensor arena / RAM requirements
-- Flash usage
-- ESP32 inference latency
+- 0 NaN values
+- 0 infinite values
+- 0 constant features
+- 0 near-constant features
 
-This avoids selecting an arbitrary number of features before establishing a baseline.
+A correlation analysis using a threshold of |r| >= 0.99 identified 160 highly correlated feature pairs.
+
+A deterministic correlation-redundancy selection procedure was then applied using the training set only.
+
+Results:
+
+- Original features: 115
+- Selected features: 60
+- Removed redundant features: 55
+
+Two feature configurations will therefore be evaluated:
+
+1. Full baseline: 115 features
+2. Correlation-reduced baseline: 60 features
+
+The reduced feature set will only be considered preferable if it maintains acceptable detection performance while improving embedded resource requirements such as model size, RAM/tensor arena usage, Flash usage, and inference latency.
 
 ## Class Imbalance
 

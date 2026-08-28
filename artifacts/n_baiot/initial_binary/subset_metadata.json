@@ -1,0 +1,469 @@
+{
+  "dataset": "N-BaIoT",
+  "device": "Danmini Doorbell",
+  "problem": "binary_classification",
+  "labels": {
+    "0": "benign",
+    "1": "attack"
+  },
+  "random_seed": 42,
+  "feature_count": 115,
+  "feature_names": [
+    "MI_dir_L5_weight",
+    "MI_dir_L5_mean",
+    "MI_dir_L5_variance",
+    "MI_dir_L3_weight",
+    "MI_dir_L3_mean",
+    "MI_dir_L3_variance",
+    "MI_dir_L1_weight",
+    "MI_dir_L1_mean",
+    "MI_dir_L1_variance",
+    "MI_dir_L0.1_weight",
+    "MI_dir_L0.1_mean",
+    "MI_dir_L0.1_variance",
+    "MI_dir_L0.01_weight",
+    "MI_dir_L0.01_mean",
+    "MI_dir_L0.01_variance",
+    "H_L5_weight",
+    "H_L5_mean",
+    "H_L5_variance",
+    "H_L3_weight",
+    "H_L3_mean",
+    "H_L3_variance",
+    "H_L1_weight",
+    "H_L1_mean",
+    "H_L1_variance",
+    "H_L0.1_weight",
+    "H_L0.1_mean",
+    "H_L0.1_variance",
+    "H_L0.01_weight",
+    "H_L0.01_mean",
+    "H_L0.01_variance",
+    "HH_L5_weight",
+    "HH_L5_mean",
+    "HH_L5_std",
+    "HH_L5_magnitude",
+    "HH_L5_radius",
+    "HH_L5_covariance",
+    "HH_L5_pcc",
+    "HH_L3_weight",
+    "HH_L3_mean",
+    "HH_L3_std",
+    "HH_L3_magnitude",
+    "HH_L3_radius",
+    "HH_L3_covariance",
+    "HH_L3_pcc",
+    "HH_L1_weight",
+    "HH_L1_mean",
+    "HH_L1_std",
+    "HH_L1_magnitude",
+    "HH_L1_radius",
+    "HH_L1_covariance",
+    "HH_L1_pcc",
+    "HH_L0.1_weight",
+    "HH_L0.1_mean",
+    "HH_L0.1_std",
+    "HH_L0.1_magnitude",
+    "HH_L0.1_radius",
+    "HH_L0.1_covariance",
+    "HH_L0.1_pcc",
+    "HH_L0.01_weight",
+    "HH_L0.01_mean",
+    "HH_L0.01_std",
+    "HH_L0.01_magnitude",
+    "HH_L0.01_radius",
+    "HH_L0.01_covariance",
+    "HH_L0.01_pcc",
+    "HH_jit_L5_weight",
+    "HH_jit_L5_mean",
+    "HH_jit_L5_variance",
+    "HH_jit_L3_weight",
+    "HH_jit_L3_mean",
+    "HH_jit_L3_variance",
+    "HH_jit_L1_weight",
+    "HH_jit_L1_mean",
+    "HH_jit_L1_variance",
+    "HH_jit_L0.1_weight",
+    "HH_jit_L0.1_mean",
+    "HH_jit_L0.1_variance",
+    "HH_jit_L0.01_weight",
+    "HH_jit_L0.01_mean",
+    "HH_jit_L0.01_variance",
+    "HpHp_L5_weight",
+    "HpHp_L5_mean",
+    "HpHp_L5_std",
+    "HpHp_L5_magnitude",
+    "HpHp_L5_radius",
+    "HpHp_L5_covariance",
+    "HpHp_L5_pcc",
+    "HpHp_L3_weight",
+    "HpHp_L3_mean",
+    "HpHp_L3_std",
+    "HpHp_L3_magnitude",
+    "HpHp_L3_radius",
+    "HpHp_L3_covariance",
+    "HpHp_L3_pcc",
+    "HpHp_L1_weight",
+    "HpHp_L1_mean",
+    "HpHp_L1_std",
+    "HpHp_L1_magnitude",
+    "HpHp_L1_radius",
+    "HpHp_L1_covariance",
+    "HpHp_L1_pcc",
+    "HpHp_L0.1_weight",
+    "HpHp_L0.1_mean",
+    "HpHp_L0.1_std",
+    "HpHp_L0.1_magnitude",
+    "HpHp_L0.1_radius",
+    "HpHp_L0.1_covariance",
+    "HpHp_L0.1_pcc",
+    "HpHp_L0.01_weight",
+    "HpHp_L0.01_mean",
+    "HpHp_L0.01_std",
+    "HpHp_L0.01_magnitude",
+    "HpHp_L0.01_radius",
+    "HpHp_L0.01_covariance",
+    "HpHp_L0.01_pcc"
+  ],
+  "split_strategy": "Contiguous regions from each source CSV with unused gaps between train, validation and test. Rows are shuffled only after splitting.",
+  "row_index_convention": "Zero-based data-row indices; end index is exclusive.",
+  "sources": [
+    {
+      "source_id": 0,
+      "name": "benign",
+      "path": "data/n_baiot/raw/Danmini_Doorbell/benign_traffic.csv",
+      "binary_label": 0,
+      "total_rows": 49548,
+      "selected": {
+        "train": 28000,
+        "validation": 6000,
+        "test": 6000
+      },
+      "ranges": {
+        "train": [
+          0,
+          28000
+        ],
+        "validation": [
+          32774,
+          38774
+        ],
+        "test": [
+          43548,
+          49548
+        ],
+        "gap_1": 4774,
+        "gap_2": 4774
+      }
+    },
+    {
+      "source_id": 1,
+      "name": "gafgyt_combo",
+      "path": "data/n_baiot/raw/Danmini_Doorbell/gafgyt/combo.csv",
+      "binary_label": 1,
+      "total_rows": 59718,
+      "selected": {
+        "train": 2800,
+        "validation": 600,
+        "test": 600
+      },
+      "ranges": {
+        "train": [
+          0,
+          2800
+        ],
+        "validation": [
+          30659,
+          31259
+        ],
+        "test": [
+          59118,
+          59718
+        ],
+        "gap_1": 27859,
+        "gap_2": 27859
+      }
+    },
+    {
+      "source_id": 2,
+      "name": "gafgyt_junk",
+      "path": "data/n_baiot/raw/Danmini_Doorbell/gafgyt/junk.csv",
+      "binary_label": 1,
+      "total_rows": 29068,
+      "selected": {
+        "train": 2800,
+        "validation": 600,
+        "test": 600
+      },
+      "ranges": {
+        "train": [
+          0,
+          2800
+        ],
+        "validation": [
+          15334,
+          15934
+        ],
+        "test": [
+          28468,
+          29068
+        ],
+        "gap_1": 12534,
+        "gap_2": 12534
+      }
+    },
+    {
+      "source_id": 3,
+      "name": "gafgyt_scan",
+      "path": "data/n_baiot/raw/Danmini_Doorbell/gafgyt/scan.csv",
+      "binary_label": 1,
+      "total_rows": 29849,
+      "selected": {
+        "train": 2800,
+        "validation": 600,
+        "test": 600
+      },
+      "ranges": {
+        "train": [
+          0,
+          2800
+        ],
+        "validation": [
+          15724,
+          16324
+        ],
+        "test": [
+          29249,
+          29849
+        ],
+        "gap_1": 12924,
+        "gap_2": 12925
+      }
+    },
+    {
+      "source_id": 4,
+      "name": "gafgyt_tcp",
+      "path": "data/n_baiot/raw/Danmini_Doorbell/gafgyt/tcp.csv",
+      "binary_label": 1,
+      "total_rows": 92141,
+      "selected": {
+        "train": 2800,
+        "validation": 600,
+        "test": 600
+      },
+      "ranges": {
+        "train": [
+          0,
+          2800
+        ],
+        "validation": [
+          46870,
+          47470
+        ],
+        "test": [
+          91541,
+          92141
+        ],
+        "gap_1": 44070,
+        "gap_2": 44071
+      }
+    },
+    {
+      "source_id": 5,
+      "name": "gafgyt_udp",
+      "path": "data/n_baiot/raw/Danmini_Doorbell/gafgyt/udp.csv",
+      "binary_label": 1,
+      "total_rows": 105874,
+      "selected": {
+        "train": 2800,
+        "validation": 600,
+        "test": 600
+      },
+      "ranges": {
+        "train": [
+          0,
+          2800
+        ],
+        "validation": [
+          53737,
+          54337
+        ],
+        "test": [
+          105274,
+          105874
+        ],
+        "gap_1": 50937,
+        "gap_2": 50937
+      }
+    },
+    {
+      "source_id": 6,
+      "name": "mirai_ack",
+      "path": "data/n_baiot/raw/Danmini_Doorbell/mirai/ack.csv",
+      "binary_label": 1,
+      "total_rows": 102195,
+      "selected": {
+        "train": 2800,
+        "validation": 600,
+        "test": 600
+      },
+      "ranges": {
+        "train": [
+          0,
+          2800
+        ],
+        "validation": [
+          51897,
+          52497
+        ],
+        "test": [
+          101595,
+          102195
+        ],
+        "gap_1": 49097,
+        "gap_2": 49098
+      }
+    },
+    {
+      "source_id": 7,
+      "name": "mirai_scan",
+      "path": "data/n_baiot/raw/Danmini_Doorbell/mirai/scan.csv",
+      "binary_label": 1,
+      "total_rows": 107685,
+      "selected": {
+        "train": 2800,
+        "validation": 600,
+        "test": 600
+      },
+      "ranges": {
+        "train": [
+          0,
+          2800
+        ],
+        "validation": [
+          54642,
+          55242
+        ],
+        "test": [
+          107085,
+          107685
+        ],
+        "gap_1": 51842,
+        "gap_2": 51843
+      }
+    },
+    {
+      "source_id": 8,
+      "name": "mirai_syn",
+      "path": "data/n_baiot/raw/Danmini_Doorbell/mirai/syn.csv",
+      "binary_label": 1,
+      "total_rows": 122573,
+      "selected": {
+        "train": 2800,
+        "validation": 600,
+        "test": 600
+      },
+      "ranges": {
+        "train": [
+          0,
+          2800
+        ],
+        "validation": [
+          62086,
+          62686
+        ],
+        "test": [
+          121973,
+          122573
+        ],
+        "gap_1": 59286,
+        "gap_2": 59287
+      }
+    },
+    {
+      "source_id": 9,
+      "name": "mirai_udp",
+      "path": "data/n_baiot/raw/Danmini_Doorbell/mirai/udp.csv",
+      "binary_label": 1,
+      "total_rows": 237665,
+      "selected": {
+        "train": 2800,
+        "validation": 600,
+        "test": 600
+      },
+      "ranges": {
+        "train": [
+          0,
+          2800
+        ],
+        "validation": [
+          119632,
+          120232
+        ],
+        "test": [
+          237065,
+          237665
+        ],
+        "gap_1": 116832,
+        "gap_2": 116833
+      }
+    },
+    {
+      "source_id": 10,
+      "name": "mirai_udpplain",
+      "path": "data/n_baiot/raw/Danmini_Doorbell/mirai/udpplain.csv",
+      "binary_label": 1,
+      "total_rows": 81982,
+      "selected": {
+        "train": 2800,
+        "validation": 600,
+        "test": 600
+      },
+      "ranges": {
+        "train": [
+          0,
+          2800
+        ],
+        "validation": [
+          41791,
+          42391
+        ],
+        "test": [
+          81382,
+          81982
+        ],
+        "gap_1": 38991,
+        "gap_2": 38991
+      }
+    }
+  ],
+  "splits": {
+    "train": {
+      "samples": 56000,
+      "benign": 28000,
+      "attack": 28000,
+      "shape": [
+        56000,
+        115
+      ]
+    },
+    "validation": {
+      "samples": 12000,
+      "benign": 6000,
+      "attack": 6000,
+      "shape": [
+        12000,
+        115
+      ]
+    },
+    "test": {
+      "samples": 12000,
+      "benign": 6000,
+      "attack": 6000,
+      "shape": [
+        12000,
+        115
+      ]
+    }
+  }
+}

@@ -1,0 +1,347 @@
+{
+  "method": "correlation_redundancy_removal",
+  "fitted_on": "training_set_only",
+  "correlation_threshold": 0.99,
+  "original_feature_count": 115,
+  "selected_feature_count": 60,
+  "removed_feature_count": 55,
+  "selected_features": [
+    "MI_dir_L5_weight",
+    "MI_dir_L5_mean",
+    "MI_dir_L5_variance",
+    "MI_dir_L3_variance",
+    "MI_dir_L1_weight",
+    "MI_dir_L1_mean",
+    "MI_dir_L1_variance",
+    "MI_dir_L0.1_weight",
+    "MI_dir_L0.01_weight",
+    "HH_L5_weight",
+    "HH_L5_mean",
+    "HH_L5_std",
+    "HH_L5_magnitude",
+    "HH_L5_radius",
+    "HH_L5_covariance",
+    "HH_L5_pcc",
+    "HH_L3_std",
+    "HH_L3_covariance",
+    "HH_L3_pcc",
+    "HH_L1_weight",
+    "HH_L1_std",
+    "HH_L1_radius",
+    "HH_L1_covariance",
+    "HH_L1_pcc",
+    "HH_L0.1_weight",
+    "HH_L0.1_std",
+    "HH_L0.1_radius",
+    "HH_L0.1_covariance",
+    "HH_L0.1_pcc",
+    "HH_L0.01_weight",
+    "HH_L0.01_std",
+    "HH_L0.01_radius",
+    "HH_L0.01_covariance",
+    "HH_L0.01_pcc",
+    "HH_jit_L5_mean",
+    "HH_jit_L5_variance",
+    "HH_jit_L1_variance",
+    "HH_jit_L0.1_mean",
+    "HH_jit_L0.1_variance",
+    "HH_jit_L0.01_variance",
+    "HpHp_L5_weight",
+    "HpHp_L5_std",
+    "HpHp_L5_radius",
+    "HpHp_L5_pcc",
+    "HpHp_L3_weight",
+    "HpHp_L3_radius",
+    "HpHp_L3_pcc",
+    "HpHp_L1_weight",
+    "HpHp_L1_std",
+    "HpHp_L1_radius",
+    "HpHp_L1_covariance",
+    "HpHp_L1_pcc",
+    "HpHp_L0.1_weight",
+    "HpHp_L0.1_std",
+    "HpHp_L0.1_radius",
+    "HpHp_L0.1_covariance",
+    "HpHp_L0.1_pcc",
+    "HpHp_L0.01_std",
+    "HpHp_L0.01_covariance",
+    "HpHp_L0.01_pcc"
+  ],
+  "removed_features": [
+    {
+      "feature": "MI_dir_L3_weight",
+      "redundant_with": "MI_dir_L5_weight",
+      "correlation": 0.9925878123143119
+    },
+    {
+      "feature": "MI_dir_L3_mean",
+      "redundant_with": "MI_dir_L5_mean",
+      "correlation": 0.9921072379924838
+    },
+    {
+      "feature": "MI_dir_L0.1_mean",
+      "redundant_with": "MI_dir_L1_mean",
+      "correlation": 0.9926568970461289
+    },
+    {
+      "feature": "MI_dir_L0.1_variance",
+      "redundant_with": "MI_dir_L1_variance",
+      "correlation": 0.9971125922014022
+    },
+    {
+      "feature": "MI_dir_L0.01_mean",
+      "redundant_with": "MI_dir_L1_mean",
+      "correlation": 0.9901482902149777
+    },
+    {
+      "feature": "MI_dir_L0.01_variance",
+      "redundant_with": "MI_dir_L1_variance",
+      "correlation": 0.9965343401657194
+    },
+    {
+      "feature": "H_L5_weight",
+      "redundant_with": "MI_dir_L5_weight",
+      "correlation": 1.0
+    },
+    {
+      "feature": "H_L5_mean",
+      "redundant_with": "MI_dir_L5_mean",
+      "correlation": 0.9999999999999999
+    },
+    {
+      "feature": "H_L5_variance",
+      "redundant_with": "MI_dir_L5_variance",
+      "correlation": 0.9999999999999994
+    },
+    {
+      "feature": "H_L3_weight",
+      "redundant_with": "MI_dir_L5_weight",
+      "correlation": 0.9925878123140525
+    },
+    {
+      "feature": "H_L3_mean",
+      "redundant_with": "MI_dir_L5_mean",
+      "correlation": 0.9921072380005731
+    },
+    {
+      "feature": "H_L3_variance",
+      "redundant_with": "MI_dir_L3_variance",
+      "correlation": 1.0
+    },
+    {
+      "feature": "H_L1_weight",
+      "redundant_with": "MI_dir_L1_weight",
+      "correlation": 0.9999999999995877
+    },
+    {
+      "feature": "H_L1_mean",
+      "redundant_with": "MI_dir_L1_mean",
+      "correlation": 0.9999999996602144
+    },
+    {
+      "feature": "H_L1_variance",
+      "redundant_with": "MI_dir_L1_variance",
+      "correlation": 0.9999999999983542
+    },
+    {
+      "feature": "H_L0.1_weight",
+      "redundant_with": "MI_dir_L0.1_weight",
+      "correlation": 0.9999999999750282
+    },
+    {
+      "feature": "H_L0.1_mean",
+      "redundant_with": "MI_dir_L1_mean",
+      "correlation": 0.9926568344910073
+    },
+    {
+      "feature": "H_L0.1_variance",
+      "redundant_with": "MI_dir_L1_variance",
+      "correlation": 0.9971125924873667
+    },
+    {
+      "feature": "H_L0.01_weight",
+      "redundant_with": "MI_dir_L0.01_weight",
+      "correlation": 0.9999999999566579
+    },
+    {
+      "feature": "H_L0.01_mean",
+      "redundant_with": "MI_dir_L1_mean",
+      "correlation": 0.9901481154104823
+    },
+    {
+      "feature": "H_L0.01_variance",
+      "redundant_with": "MI_dir_L1_variance",
+      "correlation": 0.9965343404727445
+    },
+    {
+      "feature": "HH_L3_weight",
+      "redundant_with": "HH_L5_weight",
+      "correlation": 0.9980112327166617
+    },
+    {
+      "feature": "HH_L3_mean",
+      "redundant_with": "HH_L5_mean",
+      "correlation": 0.9999969669408146
+    },
+    {
+      "feature": "HH_L3_magnitude",
+      "redundant_with": "HH_L5_magnitude",
+      "correlation": 0.9999907222055684
+    },
+    {
+      "feature": "HH_L3_radius",
+      "redundant_with": "HH_L5_radius",
+      "correlation": 0.9962313305766451
+    },
+    {
+      "feature": "HH_L1_mean",
+      "redundant_with": "HH_L5_mean",
+      "correlation": 0.9999635236969334
+    },
+    {
+      "feature": "HH_L1_magnitude",
+      "redundant_with": "HH_L5_magnitude",
+      "correlation": 0.9999117782629795
+    },
+    {
+      "feature": "HH_L0.1_mean",
+      "redundant_with": "HH_L5_mean",
+      "correlation": 0.9992916202887323
+    },
+    {
+      "feature": "HH_L0.1_magnitude",
+      "redundant_with": "HH_L5_magnitude",
+      "correlation": 0.999078775278634
+    },
+    {
+      "feature": "HH_L0.01_mean",
+      "redundant_with": "HH_L5_mean",
+      "correlation": 0.9983882249162432
+    },
+    {
+      "feature": "HH_L0.01_magnitude",
+      "redundant_with": "HH_L5_magnitude",
+      "correlation": 0.998141842712709
+    },
+    {
+      "feature": "HH_jit_L5_weight",
+      "redundant_with": "HH_L5_weight",
+      "correlation": 1.0
+    },
+    {
+      "feature": "HH_jit_L3_weight",
+      "redundant_with": "HH_L5_weight",
+      "correlation": 0.9980112327166617
+    },
+    {
+      "feature": "HH_jit_L3_mean",
+      "redundant_with": "HH_jit_L5_mean",
+      "correlation": 0.9999942304261169
+    },
+    {
+      "feature": "HH_jit_L3_variance",
+      "redundant_with": "HH_jit_L5_variance",
+      "correlation": 0.992025580722265
+    },
+    {
+      "feature": "HH_jit_L1_weight",
+      "redundant_with": "HH_L1_weight",
+      "correlation": 1.0
+    },
+    {
+      "feature": "HH_jit_L1_mean",
+      "redundant_with": "HH_jit_L5_mean",
+      "correlation": 0.9994129881468887
+    },
+    {
+      "feature": "HH_jit_L0.1_weight",
+      "redundant_with": "HH_L0.1_weight",
+      "correlation": 1.0
+    },
+    {
+      "feature": "HH_jit_L0.01_weight",
+      "redundant_with": "HH_L0.01_weight",
+      "correlation": 1.0
+    },
+    {
+      "feature": "HH_jit_L0.01_mean",
+      "redundant_with": "HH_jit_L0.1_mean",
+      "correlation": 0.9994462948912076
+    },
+    {
+      "feature": "HpHp_L5_mean",
+      "redundant_with": "HH_L5_mean",
+      "correlation": 0.9998672367465807
+    },
+    {
+      "feature": "HpHp_L5_magnitude",
+      "redundant_with": "HH_L5_magnitude",
+      "correlation": 0.996023708541554
+    },
+    {
+      "feature": "HpHp_L5_covariance",
+      "redundant_with": "HH_L5_covariance",
+      "correlation": 0.9970584079006243
+    },
+    {
+      "feature": "HpHp_L3_mean",
+      "redundant_with": "HH_L5_mean",
+      "correlation": 0.999866806614999
+    },
+    {
+      "feature": "HpHp_L3_std",
+      "redundant_with": "HpHp_L5_std",
+      "correlation": 0.9904793861975949
+    },
+    {
+      "feature": "HpHp_L3_magnitude",
+      "redundant_with": "HH_L5_magnitude",
+      "correlation": 0.9960198859047547
+    },
+    {
+      "feature": "HpHp_L3_covariance",
+      "redundant_with": "HH_L5_covariance",
+      "correlation": 0.9902407332820956
+    },
+    {
+      "feature": "HpHp_L1_mean",
+      "redundant_with": "HH_L5_mean",
+      "correlation": 0.9998630467648515
+    },
+    {
+      "feature": "HpHp_L1_magnitude",
+      "redundant_with": "HH_L5_magnitude",
+      "correlation": 0.9960033633684736
+    },
+    {
+      "feature": "HpHp_L0.1_mean",
+      "redundant_with": "HH_L5_mean",
+      "correlation": 0.9998209732027722
+    },
+    {
+      "feature": "HpHp_L0.1_magnitude",
+      "redundant_with": "HH_L5_magnitude",
+      "correlation": 0.9959046889947865
+    },
+    {
+      "feature": "HpHp_L0.01_weight",
+      "redundant_with": "HpHp_L0.1_weight",
+      "correlation": 0.999070287061442
+    },
+    {
+      "feature": "HpHp_L0.01_mean",
+      "redundant_with": "HH_L5_mean",
+      "correlation": 0.9997859619759538
+    },
+    {
+      "feature": "HpHp_L0.01_magnitude",
+      "redundant_with": "HH_L5_magnitude",
+      "correlation": 0.99568137890338
+    },
+    {
+      "feature": "HpHp_L0.01_radius",
+      "redundant_with": "HpHp_L0.1_radius",
+      "correlation": 0.9987548007188805
+    }
+  ]
+}
