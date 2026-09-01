@@ -1,0 +1,16 @@
+{
+  "configuration": "reduced_60",
+  "input_features": 60,
+  "train_samples": 56000,
+  "validation_samples": 12000,
+  "test_samples": 12000,
+  "epochs_completed": 20,
+  "test_metrics": {
+    "accuracy": 0.9984999895095825,
+    "loss": 0.02425197884440422,
+    "pr_auc": 0.9994098544120789,
+    "precision": 0.9978362321853638,
+    "recall": 0.9991666674613953,
+    "roc_auc": 0.9994151592254639
+  }
+}

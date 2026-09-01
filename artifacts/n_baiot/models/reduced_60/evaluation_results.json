@@ -1,0 +1,13 @@
+{
+  "configuration": "reduced_60",
+  "threshold": 0.5,
+  "samples": 12000,
+  "tp": 5995,
+  "tn": 5987,
+  "fp": 13,
+  "fn": 5,
+  "accuracy": 0.9985,
+  "precision": 0.9978362183754993,
+  "recall": 0.9991666666666666,
+  "f1": 0.9985009993337775
+}

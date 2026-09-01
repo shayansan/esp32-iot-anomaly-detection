@@ -1,0 +1,16 @@
+{
+  "configuration": "full_115",
+  "input_features": 115,
+  "train_samples": 56000,
+  "validation_samples": 12000,
+  "test_samples": 12000,
+  "epochs_completed": 11,
+  "test_metrics": {
+    "accuracy": 0.9990833401679993,
+    "loss": 0.014681159518659115,
+    "pr_auc": 0.9995762705802917,
+    "precision": 0.9990001916885376,
+    "recall": 0.9991666674613953,
+    "roc_auc": 0.999498188495636
+  }
+}
