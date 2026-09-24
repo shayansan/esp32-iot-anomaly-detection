@@ -1,0 +1,49 @@
+{
+  "board": "ESP32-S3-DevKitC-1-N8",
+  "cpu_mhz": 160,
+  "psram": false,
+
+  "model": "n_baiot_reduced_60_int8",
+  "model_size_bytes": 6280,
+
+  "tensor_arena_used_bytes": 1228,
+  "minimum_tested_tensor_arena_bytes": 1608,
+  "largest_tested_failing_tensor_arena_bytes": 1600,
+  "recommended_tensor_arena_bytes": 1792,
+
+  "firmware_ram_bytes_at_recommended_arena": 17548,
+  "firmware_flash_bytes": 217105,
+
+  "correctness_tests": {
+    "attack": {
+      "expected_label": 1,
+      "host_predicted_label": 1,
+      "esp32_predicted_label": 1,
+      "passed": true
+    },
+    "benign": {
+      "expected_label": 0,
+      "host_predicted_label": 0,
+      "esp32_predicted_label": 0,
+      "passed": true
+    }
+  },
+
+  "host_device_parity_passed": true,
+
+  "benchmark_warmup_runs": 5,
+  "benchmark_runs": 100,
+
+  "latency_us": {
+    "attack_sample": {
+      "min": 77,
+      "max": 91,
+      "average": 77.53
+    },
+    "benign_sample": {
+      "min": 77,
+      "max": 79,
+      "average": 77.35
+    }
+  }
+}
