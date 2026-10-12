@@ -1,0 +1,15 @@
+{
+  "dataset": "N-BaIoT",
+  "device": "Danmini Doorbell",
+  "protocol": "mixed_stratified_diagnostic",
+  "purpose": "diagnose source-range distribution shift",
+  "sample_pool": "same 88000 samples as initial_multiclass",
+  "random_seed": 42,
+  "classes": 11,
+  "samples_per_class": {
+    "train": 5600,
+    "validation": 1200,
+    "test": 1200
+  },
+  "warning": "This protocol mixes samples from the previously separated source regions and is intended as a diagnostic IID-style baseline, not the primary generalization estimate."
+}

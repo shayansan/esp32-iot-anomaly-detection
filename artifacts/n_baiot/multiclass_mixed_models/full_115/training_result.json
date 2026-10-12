@@ -1,0 +1,9 @@
+{
+  "variant": "full_115",
+  "input_features": 115,
+  "classes": 11,
+  "epochs_trained": 30,
+  "parameters": 4427,
+  "test_loss": 0.15647374093532562,
+  "test_accuracy": 0.8984848260879517
+}
